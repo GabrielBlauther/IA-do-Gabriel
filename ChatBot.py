@@ -15,14 +15,14 @@ if api_key is None:
 os.environ['GROQ_API_KEY'] = api_key
 
 # Inicializar o modelo de IA
-chat = ChatGroq(model='llama-3.1-70b-versatile')
+chat = ChatGroq(model='llama-3.3-70b-versatile')
 
 
 def resposta_bot(mensagens, documento):
     """
     Gera uma resposta da IA com base nas mensagens e no documento carregado.
     """
-    mensagens_system = '''Você é um assistente amigável chamado IA do Gabriel Blauther. 
+    mensagens_system = '''Você é um assistente amigável chamado IA do Gabriel Blauther.
     Você utiliza as seguintes informações para formular as suas respostas: {informaçoes}
     '''
     mensagens_modelo = [('system', mensagens_system)]
